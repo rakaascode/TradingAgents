@@ -666,6 +666,7 @@ def ask_output_language() -> str:
             questionary.Choice("German (Deutsch)", "German"),
             questionary.Choice("Arabic (العربية)", "Arabic"),
             questionary.Choice("Russian (Русский)", "Russian"),
+            questionary.Choice("Indonesian (Bahasa Indonesia)", "Indonesian"),
             questionary.Choice("Custom language", "custom"),
         ],
         style=questionary.Style([
@@ -681,7 +682,7 @@ def ask_output_language() -> str:
         return "English"
     if choice == "custom":
         return (questionary.text(
-            "Enter language name (e.g. Turkish, Vietnamese, Thai, Indonesian):",
+            "Enter language name (e.g. Turkish, Vietnamese, Thai, Italian):",
             validate=lambda x: len(x.strip()) > 0 or "Please enter a language name.",
         ).ask() or "").strip() or "English"
 

@@ -120,3 +120,11 @@ class TestLanguageDefaultsToEnglish:
         with mock.patch.object(utils.questionary, "select", return_value=_asks("custom")), \
              mock.patch.object(utils.questionary, "text", return_value=_asks(None)):
             assert utils.ask_output_language() == "English"
+
+    def test_select_indonesian(self):
+        with mock.patch.object(utils.questionary, "select") as mock_select:
+            mock_select.return_value = _asks("Indonesian")
+            assert utils.ask_output_language() == "Indonesian"
+            choices = mock_select.call_args[1]["choices"]
+            choice_values = [c.value if hasattr(c, "value") else c for c in choices]
+            assert "Indonesian" in choice_values
