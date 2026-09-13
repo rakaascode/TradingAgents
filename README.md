@@ -18,6 +18,7 @@
   <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=de">Deutsch</a> | 
   <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=es">Español</a> | 
   <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=fr">français</a> | 
+  <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=id">Bahasa Indonesia</a> | 
   <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=ja">日本語</a> | 
   <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=ko">한국어</a> | 
   <a href="https://www.readme-i18n.com/TauricResearch/TradingAgents?lang=pt">Português</a> | 
@@ -193,6 +194,18 @@ An interface will appear showing results as they load, letting you track the age
 <p align="center">
   <img src="assets/cli/cli_transaction.png" width="100%" style="display: inline-block; margin: 0 2%;">
 </p>
+
+### Multi-language Reports
+
+TradingAgents generates reports and trading decisions in multiple languages while keeping internal multi-agent debates in English for maximum reasoning quality.
+
+Supported preset languages in the interactive CLI:
+- **English**, **Indonesian (Bahasa Indonesia)**, **Chinese (中文)**, **Japanese (日本語)**, **Korean (한국어)**, **Hindi (हिन्दी)**, **Spanish (Español)**, **Portuguese (Português)**, **French (Français)**, **German (Deutsch)**, **Arabic (العربية)**, **Russian (Русский)**, or any **Custom language**.
+
+You can also configure the language via `.env` or Python:
+```bash
+TRADINGAGENTS_OUTPUT_LANGUAGE=Indonesian
+```
 
 ## TradingAgents Package
 
